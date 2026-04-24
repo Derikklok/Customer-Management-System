@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: mariadb_container
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: sachin1605
+      MARIADB_DATABASE: customer_db
+    ports:
+      - "3300:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    container_name: backend_app_container
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://db:3306/customer_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=sachin1605
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+
+  frontend:
+    build: ./frontend
+    container_name: frontend_app_container
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: always
+
+volumes:
+  mariadb_data:
