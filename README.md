@@ -82,7 +82,6 @@ npm run dev
 
 Docker Compose will spin up all three services — MariaDB, Spring Boot, and the Nginx-served React app — with a single command.
 
-> ⚠️ **Note:** The Docker setup is suitable for testing and demonstration. For active development, the local setup above is significantly faster due to hot-reload and direct debugging capabilities.
 
 ### Prerequisites
 
