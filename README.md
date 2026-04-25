@@ -4,14 +4,14 @@ A full-stack Customer Management System built with **Spring Boot** (backend) and
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📋 **Customer Dashboard** — Paginated, sortable table of all customers
-- 👤 **View Customer** — Detailed profile view with addresses and linked family members
-- ➕ **Create Customer** — Multi-address, multi-contact form with country/city dropdowns
-- ✏️ **Edit Customer** — Pre-populated form with full update capability
-- 📦 **Bulk Create** — Upload an `.xlsx` Excel file to create up to 1,000,000 customer records asynchronously in the background
-- 🔄 **Real-time UI Sync** — Dashboard automatically refreshes after any create/edit/bulk operation
+-  **Customer Dashboard** — Paginated, sortable table of all customers
+-  **View Customer** — Detailed profile view with addresses and linked family members
+-  **Create Customer** — Multi-address, multi-contact form with country/city dropdowns
+-  **Edit Customer** — Pre-populated form with full update capability
+-  **Bulk Create** — Upload an `.xlsx` Excel file to create up to 1,000,000 customer records asynchronously in the background
+-  **Real-time UI Sync** — Dashboard automatically refreshes after any create/edit/bulk operation
 
 ---
 
@@ -105,7 +105,7 @@ This will:
 
 | Service  | URL                          |
 |----------|------------------------------|
-| Frontend | http://localhost:3000        |
+| Frontend | http://localhost:5173        |
 | Backend  | http://localhost:8080/api    |
 | Database | `localhost:3300` (host)      |
 
