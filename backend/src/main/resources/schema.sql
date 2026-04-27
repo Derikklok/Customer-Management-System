@@ -8,8 +8,10 @@ CREATE TABLE IF NOT EXISTS cities (
                                       id BIGINT AUTO_INCREMENT PRIMARY KEY,
                                       name VARCHAR(100) NOT NULL,
     country_id BIGINT NOT NULL,
-    FOREIGN KEY (country_id) REFERENCES countries(id)
+    FOREIGN KEY (country_id) REFERENCES countries(id),
+    UNIQUE (name, country_id)
     );
+
 
 -- Customer tables
 CREATE TABLE IF NOT EXISTS customers (
