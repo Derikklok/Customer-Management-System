@@ -154,7 +154,7 @@ For the Bulk Create feature, prepare an `.xlsx` file with the following column s
 | 1      | Full Name          | Jane Smith       |
 | 2      | Date of Birth      | 1985-08-22       |
 | 3      | NIC Number         | 987654321V       |
-| 4      | Mobile Numbers     | 0779876543       |
+
 
 > The system processes records asynchronously and is optimized for files with up to **1,000,000 rows**.
 
@@ -172,4 +172,18 @@ For the Bulk Create feature, prepare an `.xlsx` file with the following column s
 | GET    | `/api/locations/countries`             | Get list of all countries            |
 | GET    | `/api/locations/countries/{id}/cities` | Get cities for a given country       |
 
-> Full API documentation can be found in `backend/docs/API.md`.
+> Full API documentation can be found in `backend/docs/`.
+
+> Sample Excel file with 1,000,000 records can be found in `backend/docs/customers_1m_no_contact.xlsx`.
+
+## Deployment & Environment Variables
+
+Current implementation handles environment variables in respective files.
+In deploy6emnt separate the `.env` files for the backend and frontend separately.
+
+> backend - `.env.properties`.
+```bash
+server.port=${BASE_URL}
+```
+
+> frontend - `.env`

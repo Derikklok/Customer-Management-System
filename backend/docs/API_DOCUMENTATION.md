@@ -241,4 +241,3 @@ The Excel file should omit a header row (or have exactly 1 header row that will 
 - **Index 0:** Name (`String`)
 - **Index 1:** Date of Birth (`Date` or `String` parseable)
 - **Index 2:** NIC Number (`String`)
-- **Index 3:** Mobile Numbers (Comma-separated `String`, ex: "0711111111,0722222222")
