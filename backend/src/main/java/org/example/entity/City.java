@@ -4,7 +4,8 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cities")
+@Table(name = "cities", uniqueConstraints = {@UniqueConstraint(columnNames = {"name", "country_id"})})
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
